@@ -1,0 +1,21 @@
+APPOINTMENT 1 TA PAK ADI
+yang perlu dilakukan + notes:
+- membuat plot HM setiap unit alat berat, melihat apakah fluktuatif atau ngga, apakah ada pola-pola yang muncul -> harus fluktuatif biar bisa diprediksi (25.00-27.10)
+- mencari tahu apakah setiap unit alat berat itu ada patokan kapan harus melakukan pengisian bbm? kek di angka tertentu harus isi begitu apakah ada? kapan mulai diisi bahan bakarnya, berapa konsumsi bbm setiap mesin setiap kegiatan -> harus ada biar bisa dilakukan konversi
+- apa kegiatan yang dilakukan setiap unit alat berat saat HM bertambah agar bisa membedakan kebutuhan bahan bakar berapa untuk kegiatan apa saja? -> kalo pake anggepan bahwa 80% yang dilakukan merupakan kegiatan non produktif, 20% produktif gmn (rencana nentuin aja berapa persen produktif berapa persen non produktif, untuk setiap jenis alat berat berbeda)
+- bisa membedakan kalau non produktif untuk setiap mesin kebutuhan BBM nya sekian, kalau produktif sekian -> berapa konsumsi BBM untuk setiap mesin setiap kegiatan
+- apakah setiap pengisian itu selalu dilakukan di kondisi yang sama, kalo diisi ini apakah sampe penuh semua. kalo memang ada standar pengisian itu sampe penuh bisa kita interpolasi (08.00) -> pengisian ini kan selalu berbeda beda, jadi kondisi awal nya kan beda, tapi kondisi akhir nya apakah sama? kalo beda ya ngga bisa kita forecast karena ngga tau berapa liter yang habis
+- setiap perubahan hour meter bisa ketahuan kegiatannya apa
+
+JAWABAN APPOINTMENT 1 TA PAK ADI
+1. sudah dibuat plot nya, terlihat fluktuatif
+2. pengisian BBM selalu dilakukan sampai full, tapi tidak ada ketentuan harus di angka berapa baru mengisi. ada kapasitas tangki per unit alat berat tapi baru bisa minggu depan
+3. untuk kegiatannya dari user cuman bisa tahu trucking & non-trucking itu berapa persen kegiatan yang produktif, berapa persen yang non produktif karena kalo dari kolom kegiatan itu kan diinput manual sama pengguna, nah itu banyak yang bolong-bolong, kadang isi kadang ngga. 
+kalo untuk per jenis alat berat itu persentasenya: 
+- trailer & tronton 70% produktif (dooring & haulage) 30% non produktif (mindahin container antar depo)
+- reach stacker, top loader, side loader, crane, forklift: 40% produktif (bongkar muat, stuffing stripping) 60% non produktif (mindah container dari tumpukan-tumpukan)
+
+
+PERTANYAAN
+1. setelah tahu pembagian produktif dan non produktif gunanya apa? kan tetap di akhir akan ditotal jadi kebutuhan bulanannya berapa?
+2. per jenis atau per unit alat berat?

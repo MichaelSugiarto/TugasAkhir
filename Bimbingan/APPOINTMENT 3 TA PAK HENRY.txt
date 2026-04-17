@@ -1,0 +1,6 @@
+APPOINTMENT 3 TA PAK HENRY
+1. rewind analisanya gimana tapi ngomong pake HM aja, bukan pake berat angkutan dan jarak. kalo ditanya kenapa HM aja baru dijelasin kalo data berat itu hanya mencakup kegiatan produktif (stuffing stripping, bongkar muat), sedangkan kegiatan non produktif (pindah tumpukan container) itu tidak tercatat, jadi kata direktur nya sebagai user mending pake HM aja karena lebih relevan dan dibilangin kalo supir nya juga biasanya tidak akan nyalain mesin kalo ngga dipake kerja jadi ngga bakal ada HM bertambah tapi tidak bekerja
+2. bahas sudah diskusi dengan pak adi juga pertama kali terus dikatakan kalo yang pertama sama yaitu forecast time series untuk HM nya, tapi selanjutnya kan rencana pake linear regression itu tapi dari pak adi ngomongnya pake rumus aja sebagai konversi, tapi beliau juga bilang kalo sama aja sebenernya karena rumus nya itu bisa jadi bentuk aktualnya merupakan linear regression, yang penting adalah tahap kedua itu lebih ke arah konversi bukan prediksi
+3. bahas sama pak adi juga disuruh plot HM nya tiap unit alat berat itu fluktuatif apa ngga, cari tahu apakah ada patokan berapa baru mengisi bbm atau kapan baru mereka mengisi bbm, kegiatan saat HM naik itu apa
+4. bahas yang kegiatan produktif dan non produktif
+5. tanya jadinya analisa per unit atau jenis alat berat mendingan

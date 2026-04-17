@@ -1,0 +1,13 @@
+- 
+
+
+per minggu, per bulan, per unit (3 paling tinggi dan 3 paling rendah), per jenis (rata-rata banyak dan rata-rata kecil)
+
+
+rmse hitung error nya berapa, auto arima/grid search untuk pdq nya, apakah puas dengan itu. kalo ngga puas maka bisa kita 
+
+
+arima/sarima 
+
+
+selasa 8 pagi

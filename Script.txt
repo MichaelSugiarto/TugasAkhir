@@ -1,0 +1,60 @@
+15-4-2026
+- pada analisa ini, tolong bantu saya buatkan code untuk menampilkan line plot dari HM setiap unit alat berat (trucking maupun non-trucking) dari tahun 2024 hingga 2025, hal ini digunakan untuk melihat apakah memang benar fluktuatif atau tidak untuk HM nya. tolong buatkan code nya dalam file baru bentuk file ipynb saja
+
+
+
+- untuk code tersebut kan ada yg menampilkan keseluruhan unit, kalau misalkan yang ditampilkan adalah rata-rata setiap jenis alat berat nya begitu saja apakah menurut anda masih bisa menjawab yang kita inginkan ya? untuk code block terakhir yang bisa menampilkan tiap unit satu per satu berdasarkan input itu biarkan saja, hanya ubah code block 2 saja
+
+
+
+- tolong ralat, jadi yang saya inginkan adalah plot rata-rata per jenis alat berat yang bisa diambil dari file cost & bbm 2022 sd 2025 HP & Type.xlsx tersebut, jadi nama unit dicek dengan yang ada di file ini baru setelah itu bisa dilihat unit tersebut jenis nya apa. jangan lupa penerapan aturan pembacaan nama unit yang sebelumnya saya berikan perihal adanya perbedaan penamaan antara file BBM AAB tahun 2024-2025 dengan file cost & bbm 2022 sd 2025 HP & Type.xlsx ini, apabila anda lupa aturannya seperti apa katakan saja agar saya bisa memberikan aturannya itu apa
+
+
+
+- untuk setiap jenis alat tolong pada plot nya diberikan informasi juga ada berapa unit pada jenis alat tersebut, dan pada code block lain tolong berikan code yang mengoutputkan ada unit apa saja untuk setiap jenis alat berat yang terdeteksi
+
+
+
+- tolong untuk unit yang kita analisa itu hanya sebatas trucking (tronton, trailer) dan non-trucking (forklift, crane, top loader, side loader, reach stacker) yang terdeteksi di file master cost & bbm 2022 sd 2025 HP & Type.xlsx saja. jadi alat-alat selain itu diexcludekan saja seperti genset, kompressor, dll
+- lalu di bagian TIDAK TERDAFTAR itu masih ada beberapa unit trailer/tronton yang terlewat dari aturan pembacaan nama yang sebelumnya saya katakan. jadi mungkin saya berikan ulang saja aturannya seperti apa agar dapat meminimalkan unit yang terlewat ini. berikut untuk aturannya:
+1. FL RENTAL 01 = FL RENTAL 01 TIMIKA
+2. TOBATI (EX.FL KALMAR 32T) = TOP LOADER KALMAR 35T/TOBATI
+3. L 8477 UUC (EX.L 9902 UR) = L 9902 UR / S75
+4. WIND RIVER (EX.TL BOSS 42T) = TOP LOADER BOSS
+5. semua unit bernama plat nomor yang tidak ada di file cost & bbm 2022 sd 2025.xlsx itu dikarenakan pada file cost & bbm 2022 sd 2025.xlsx menggunakan nama setelah kata "EX." saja, tidak menggunakan nama lengkapnya
+6. ambil nama unit setelah kata "EX." saja (khusus untuk unit yang terdeteksi missing saja, untuk yang aman tidak usah mengalami pengecekan ini) untuk dicari pada file master (cost & bbm 2022 sd 2025.xlsx) karena terdapat kesamaan nama beberapa unit apabila dilihat dari kata setelah "EX." dari file BBM AAB.xlsx dengan yang ada di file cost & bbm 2022 sd 2025.xlsx. selain cek setelah kata "EX.", cek juga sebelum kata " (" apakah ada nama unit yang sesuai
+
+
+
+- untuk tronton ada 1 unit di file cost & bbm 2022 sd 2025.xlsx yang tidak masuk ke plot, trailer ada 3 unit, forklift ada 2. tolong deteksi unit apa saja itu dengan mengupdate code pada code block 5 saja
+
+
+
+- untuk unit yang missing berikut sebenarnya merupakan unit yang sama
+1. TOBATI (EX.FL KALMAR 32T) = TOP LOADER KALMAR 35T/TOBATI
+2. WIND RIVER (EX.TL BOSS 42T) = TOP LOADER BOSS
+- lalu untuk trailer dan tronton yang kita dapatkan dan yang tidak ada di cost & bbm 2022 sd 2025 HP & Type.xlsx itu seharusnya trailer yang kita dapat adalah 101 dan yang ada di cost & bbm 2022 sd 2025 HP & Type.xlsx adalah 104, lalu untuk tronton yang kita dapat 20 dan yang ada di cost & bbm 2022 sd 2025 HP & Type.xlsx adalah 21. selisih unit itu yang mau saya tahu apa saja
+
+
+
+- L9582UQ itu sama dengan L 8658 UK (EX.L 9582 UQ)
+pada file BBM AAB. untuk yg lainnya tidak apa biarkan saja
+- lalu selanjutnya saya mau tanya apakah yang sekarang sudah ada melakukan proses preprocessing?
+
+
+
+- untuk TRAILER dan TRONTON yang saya sebutkan sebelumnya kenapa masih belum masuk ke tren, apakah karena terhenti di pengecekan sesuatu atau bagaimana?
+- apakah sudah ada pengecekan apabila selama 24 bulan tersebut HM atau LITER = 0 tidak perlu dimasukkan?
+
+
+
+- selanjutnya setelah plot rata-rata setiap jenis alat berat, tolong lanjutkan dengan memberikan plot HM setiap unit per jenis alat berat dengan code block masing-masing. jadi reach stacker diberikan code block sendiri, begitu juga yg lain
+
+
+
+- untuk flutktuasi HM per unit nya itu buat langsung bulanan saja, yang sekarang pada bulan yang sama bisa ada beberapa titik
+
+
+
+(BLM)
+- apakah baiknya kalo misal suatu unit ada 3 bulan beruntun HM atau LITER = 0 maka tidak perlu diikutkan analisa?
