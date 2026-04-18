@@ -1,3 +1,0 @@
-- dicoba forecast langsung pake arima & sarima (tidak perlu dilakukan preprocessing terlebih dahulu) per unit (diambil 3 unit paling tinggi dan 3 unit paling rendah) dan per jenis (rata-rata paling besar dan rata-rata paling kecil) untuk timeframe per minggu dan per bulan. metrik error menggunakan rmse, penentuan parameter menggunakan auto arima -> setelah dilakukan percobaan ini, baru dilihat kalo ngga puas (unit tertentu tinggi banget errornya), baru dilakukan preprocessing untuk memperkecil error
-
-
