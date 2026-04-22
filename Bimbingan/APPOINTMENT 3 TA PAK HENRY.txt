@@ -4,3 +4,5 @@ APPOINTMENT 3 TA PAK HENRY
 3. bahas sama pak adi juga disuruh plot HM nya tiap unit alat berat itu fluktuatif apa ngga, cari tahu apakah ada patokan berapa baru mengisi bbm atau kapan baru mereka mengisi bbm, kegiatan saat HM naik itu apa
 4. bahas yang kegiatan produktif dan non produktif
 5. tanya jadinya analisa per unit atau jenis alat berat mendingan
+
+6. untuk model terbaik nya dipilih per unit atau secara general model paling baik itu apa

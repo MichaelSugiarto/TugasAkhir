@@ -1,0 +1,18 @@
+NOTES:
+- yang 0 untuk tahun 2026 (test) tidak perlu dimasukkan ke proses forecasting
+- tuliskan di proposal unit mana saja yang tidak perlu diforecast (karena 2026/data test HM nya 0)
+- diagram fluktuasi bulanan tiap unit tidak perlu dimasukkan di proposal, catatan saja untuk siap-siap apabila dibutuhkan waktu sidang, ditunjukkan. tidak perlu masuk proposal karena proposal lebih ke arah fitur-fitur/sistem nya seperti apa
+- arima vs gradient boosting timeframe bulanan
+- linear regression tidak bisa digunakan karena ngga lurus diagram HM nya (kyknya nangkepnya digunakan untuk forecast HM nya pake linear regression)
+- variabel eksogen hari kerja efektif sudah cukup terepresentasikan oleh HM nya (apabila libur ya HM hari itu 0). contoh variabel eksogen: delay kapal karena cuaca yang buruk; rendah ternyata ngga terlalu berpengaruh (kapal masih bisa jalan), tinggi baru berpengaruh. keterkaitannya tidak terlalu jelas bahwa kalo ada cuaca buruk langsung terjadi delay, bisa dijadikan faktor untuk prediksi berapa lama pengiriman antar pulau. kalo hari kerja otomatis berpengaruh? karena sudah sangat jelas terlihat dari HM nya 0 maka kemungkinan hari itu libur
+- masalahnya bukan apple to apple tapi manakah metode yang lebih baik dengan data yang ada. dalam beberapa kasus bisa arima lebih baik, bisa sarima lebih baik; tergantung data yang ada. menurut pak adi tidak ada masalah, apple to apple nya adalah apakah metodenya sama-sama untuk prediksi. contoh metodenya memang untuk prediksi, seperti arima vs gradient boosting dibandingkan dengan metrik yang sama (RMSE, MAPE). jadi apple to apple nya dilihat dari metrik nya
+- percobaan membandingkan model arima vs sarima dan menampilkan diagram untuk melihat fluktuatif (analisa awal yang dilakukan) tidak perlu dimasukkan ke proposal
+- pake arima aja daripada sarima meskipun hasilnya sama, karena sarima lebih kompleks tapi hasilnya sama aja dengan arima maka gunakan arima saja buat analisanya (hasil sama, tapi less kompleks)
+- dicoba, kalo semua HM nya 0 pasti exclude, beberapa bulan terakhir dia HM = 0 maka exclude karena asumsinya unit nya sudah ngga dipake. tapi kalo 3-4 bulan awal dia HM nya 0, harus dibandingkan antara HM = 0 nya dimasukkan (dipaksa 2 tahun; dipertahankan) dan dipotong, baik yang mana akurasinya
+- konversi ke bbm -> dicari rata-rata per unit itu. misalnya selama 5 hari (senin-jumat) belum diisi maka 5 hari itu total HM nya berapa, BBM nya habis berapa, tinggal dikonversi saja. total bbm selama kurun waktu tertentu dibagi total HM kurun waktu tertentu, lalu dicari rata-ratanya -> untuk mendapatkan 1 HM itu mengonsumsi berapa liter BBM
+
+
+TO DO:
+- buat docs proposal, link nya kasih ke Pak Adi nanti dicomment
+- forecast HM tiap unit bulanan menggunakan arima dan gradient boosting, kebutuhan BBM nya nanti pake rumus sendiri -> 1 HM itu mengonsumsi berapa liter BBM
+- PREPROCESSING YANG DILAKUKAN: 1. membatasi jumlah data point yang lebih menguntungkan (HM = 0 dimasukkan atau tidak), 2. outlier -> angka yang naik tinggi (robust scaler/standard scaler), 3. smoothing (biar paling ngga naik turunnya ngga terlalu besar)
